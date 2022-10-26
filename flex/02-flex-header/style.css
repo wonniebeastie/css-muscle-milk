@@ -1,6 +1,17 @@
+
 .header  {
   font-family: monospace;
   background: papayawhip;
+  display: flex; 
+  /*Turns on flexbox*/
+  justify-content: space-between; 
+  /*Makes them stretch out as window grows to the end instead of staying static*/
+  align-items: center; 
+  /*Makes the flex items move down to the center*/
+  padding: 8px;
+  /*Makes the top and bottom show up in the papayawhip color, as well as the 
+  very far right flex items*/
+  
 }
 
 .logo {
@@ -12,14 +23,22 @@
 }
 
 ul {
+  list-style-type: none; 
   /* this removes the dots on the list items*/
-  list-style-type: none;
+  display: flex; 
+  /* Turns on flexbox, needed this so that the layout will behave as a flex row
+  instead of a regular CSS block element - make the items go next to each other*/
+  gap: 10px;
+  /*This gives space between each flex item*/
+  margin: 0;
+  padding: 0;
+  /*This pushes the left flex items all the way to the left*/
 }
 
 a {
   font-size: 22px;
   background: white;
   padding: 8px;
+  text-decoration: none; 
   /* this removes the line under the links */
-  text-decoration: none;
 }
