@@ -7,20 +7,43 @@
     <title>Flex Header 2</title>
     <link rel="stylesheet" href="style.css">
   </head>
+
+
   <body>
-    <div class="header">
-      <div class="logo">
+
+    <div class="header"> <!--.header is FLEX CONTAINER 1-->
+
+     <div class ="left"> <!--.right is FLEX CONTAINER 2, same level as .right-->
+
+      <div class="logo"> <!--FLEX ITEM 1-->
         LOGO
       </div>
-      <ul class="links">
-        <li><a href="google.com">link-one</a></li>
-        <li><a href="google.com">link-two</a></li>
-        <li><a href="google.com">link-three</a></li>
-      </ul>
-      <button class="notifications">
+
+        <ul class="links"> <!--Solution: didn't need to put these in a separate flex container
+        because adding "display:flex" on ".left" made these line up horizontally as well-->
+          <li><a href="google.com">link-one</a></li>
+          <li><a href="google.com">link-two</a></li>
+          <li><a href="google.com">link-three</a></li>
+        </ul>
+      
+    </div>
+
+
+     <div class="right"> <!--.left is FLEX CONTAINER 3, same level as .left-->
+
+      <button class="notifications"> <!--FLEX ITEM 3-->
         1 new notification
       </button>
-      <div class="profile-image"></div>
+  
+      <div class="profile-image"> <!--FLEX ITEM 4-->
+
+      </div>
+
+       </div>
+  
+     </div>
+
     </div>
+
   </body>
 </html>
