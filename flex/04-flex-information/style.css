@@ -1,16 +1,87 @@
+/*
+* {
+  box-sizing: border-box;
+}
+  Makes it so that the height & width of each element is whatever pxs you set it to
+  and you only have to worry about their margins
+
+was unncessary i guess */
+
+
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 img {
+  /*
+  display: flex;
+
+Again, just a single item, why did i set it to be a flex container? idk.
+
+  */
   width: 100px;
   height: 100px;
 }
 
+
 .title {
   font-size: 36px;
   font-weight: 900;
+  /*display: flex;
+  justify-content: center;
+  
+  It didn't need to be a flex container bc it was just one thing, and a text at that,
+  which text-align: center on the body took care of...
+  */
+  margin-bottom: 32px;
+  
 }
+
+.container {
+  display: flex;
+/*Turn this into a flex container to make them into "rows" - line each item up next to each 
+other instead of on top of each other like they would behave as regular HTML block elements*/
+justify-content: center;
+/*Bring the entire items box to the center horizontally across the main axis*/
+  gap: 52px;
+}
+
+.info {
+  /*
+  display: flex;
+
+I guess this didn't need to a flex container either. Text-align on the body centered
+all the text AND the images.
+
+  flex-direction: column;
+  Makes the img and txt stack on top of each other vertically
+
+Didn't need this because not turning each of .container's flex items into their own containers
+just made them behave as normal CSS/HTML block element that stacked on top of each other...
+
+  align-items: center;
+  Makes the flex items center horizontally on the cross axis bc flex-direction
+  is set to column
+  
+Again, unnecessary bc didn't need each .info group to be flex containers...
+
+  */
+
+  max-width: 200px;
+  /*
+  width: 200px;
+  Makes each container 200px wide
+  Max-width does not let the element grow past whatever it was set to*/
+}
+
+/*.text {
+  text-align: center;
+  flex-wrap: wrap;
+}
+Didn't need to target .text because putting text-align: center on the body made all text
+including the title center without extra code.
+*/
 
 /* do not edit this footer */
 .footer {
