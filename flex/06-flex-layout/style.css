@@ -5,7 +5,65 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+/*new stuff from here*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+
 }
+
+.left-links, .right-links {
+  /* .left-links, .right links also works - target .left-links AND .right links
+  div ul also works - target all "ul"s that are children of "div"s */
+  list-style-type: none;
+  margin: 0;
+  padding: 15px 20px; 
+}
+
+div ul li {
+  display: inline;
+  
+  /* "gap" does not work here because they are not flex items,
+  they're list items.
+  padding: .2em; also works to create a gap between these
+  list items, but putting "&nbsp;" html entities in between
+  each item in the html file also works*/
+}
+ 
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+a {
+  color: #484848;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffb31a;
+}
+
+
+/*end new stuff*/
+
 
 img {
   width: 600px;
@@ -16,6 +74,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 7px 10px;
 }
 
 input {
