@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+box-sizing: content-box;
+}
 
 body {
   height: 100vh;
@@ -9,32 +12,45 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
-
 }
 
+/* 
 .left-links, .right-links {
-  /* .left-links, .right links also works - target .left-links AND .right links
-  div ul also works - target all "ul"s that are children of "div"s */
+  .left-links, .right links also works - target .left-links AND .right links
+  div ul also works - target all "ul"s that are children of "div"s 
   list-style-type: none;
   margin: 0;
   padding: 15px 20px; 
 }
 
-div ul li {
+
+  /* 
+ li {
   display: inline;
-  
-  /* "gap" does not work here because they are not flex items,
+  "gap" does not work here because they are not flex items,
   they're list items.
   padding: .2em; also works to create a gap between these
   list items, but putting "&nbsp;" html entities in between
-  each item in the html file also works*/
+  each item in the html file also works
+}
+
+The above two are unnecessary if you target all the ul elements /facepalm
+*/
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+  gap: 16px;
 }
  
 
-.header, .footer {
+.header, 
+.footer {
   display: flex;
   justify-content: space-between;
+  padding: 16px;
 }
 
 .footer {
@@ -46,14 +62,11 @@ div ul li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
- 
+  flex: 1;
 }
 
 a {
-  color: #484848;
-}
-
-a:link {
+  color: #666;
   text-decoration: none;
 }
 
